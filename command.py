@@ -24,10 +24,7 @@ class MinecraftOptions(typing.TypedDict, total=False):
     enableLoggingConfig: bool
     disableMultiplayer: bool
     disableChat: bool
-def hx():
-    print('游戏结束了')
-def minecraft_command(version: str, minecraft_directory: typing.Union[str, os.PathLike], options: MinecraftOptions,what_run_minecraft:bool,_后续处理=hx) -> typing.List[str]:
-
+def minecraft_command(version: str, minecraft_directory: typing.Union[str, os.PathLike], options: MinecraftOptions,what_run_minecraft:bool) -> typing.List[str]:
     path = str(minecraft_directory)
     if not os.path.isdir(os.path.join(path, "versions", version)):
         raise minecraft_launcher_lib.command.VersionNotFound(version)
@@ -90,36 +87,5 @@ def minecraft_command(version: str, minecraft_directory: typing.Union[str, os.Pa
     if what_run_minecraft:
         import subprocess
         subprocess.run(command)
-        _后续处理()
     else:
         return command
-def download_game(version):
-        current_max = 0
-
-        # 这里定义了一个函数，获取当前的状态
-        def set_status(status: str):
-            print(status)
-
-        # 这个函数获取了当前的进度
-        def set_progress(progress: int):
-            if current_max != 0:
-                # 这条函数打印出了当前进度/最大值
-                print(f"{progress}/{current_max}")
-
-        # 这个函数获取了最大值
-        def set_max(new_max: int):
-            # 定义一个全局变量
-            global current_max
-            # 赋值
-            current_max = new_max
-
-        # 这个函数获取了默认的.minecraft文件夹路径
-
-        # 这个dict设定了回调的内容，全部是刚才设定的函数
-        callback = {
-            "setStatus": set_status,
-            "setProgress": set_progress,
-            "setMax": set_max
-        }
-        minecraft_launcher_lib.install.install_minecraft_version(version,r'D:\mcl3\bbs',callback=callback)
-
