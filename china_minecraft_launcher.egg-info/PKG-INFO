@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: china_minecraft_launcher
+Version: 0.1.0
+Summary: This is a library to launch minecraft
+Home-page: https://github.com/fanghuangxu/china-minecraft-launcher
+Author: fanghuangxu
+Author-email: fanghuangxu@163.com
+License: LICENSE.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+
+zh:这是一个启动minecraft的库
+en:This is a library to launch minecraft

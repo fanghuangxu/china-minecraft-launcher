@@ -1,0 +1,5 @@
+setup.py
+china_minecraft_launcher.egg-info/PKG-INFO
+china_minecraft_launcher.egg-info/SOURCES.txt
+china_minecraft_launcher.egg-info/dependency_links.txt
+china_minecraft_launcher.egg-info/top_level.txt
